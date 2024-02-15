@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>Document</title>
+</head>
+<body>
+    <img src="file:///Users/bradleewilliams/Documents/Turning%20Point%20Front.jpeg">
+    <div class="container">
+        <ul class="nav bg-info">
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/members">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/members">Church Staff</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/members">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="/members">Contact Us</a>
+          </li>
+        </ul>
+      
+        {% block content %}
+        {% endblock %}
+      </div>
+    
+</body>
+</html>
