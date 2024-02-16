@@ -7,29 +7,28 @@
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="'stylesheet" type="text/css" href="">
     <title>Document</title>
 </head>
 <body>
-    <img src="file:///Users/bradleewilliams/Documents/Turning%20Point%20Front.jpeg">
     <div class="container">
         <ul class="nav bg-info">
           <li class="nav-item">
             <a class="nav-link link-light" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light" href="/members">Our Story</a>
+            <a class="nav-link link-light" href="/our_story">Our Story</a>
           </li>
           <li class="nav-item">
             <a class="nav-link link-light" href="/members">Church Staff</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light" href="/members">Events</a>
+            <a class="nav-link link-light" href="/events">Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link link-light" href="/members">Contact Us</a>
+            <a class="nav-link link-light" href="/contact">Contact Us</a>
           </li>
         </ul>
-      
         {% block content %}
         {% endblock %}
       </div>
