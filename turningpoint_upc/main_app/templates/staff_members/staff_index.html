@@ -2,4 +2,19 @@
 
 <h1>Turning Point Church Staff</h1>
 
+<button type="button">Add Staff Member</button>
+
+{% for staff in staffs %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ staff.name }}</span>
+        <h3>{{ staff.role }}</h3>
+        <p>{{ staff.about }}</p>
+    </div>
+    <div class="card-action">
+        <a href="{% url 'staff_update' staff.id %}">Edit</a>
+        <a href="{% url 'staff_delete' staff.id %}">Delete</a>
+      </div>
+</div>
+{% endfor %}
 {% endblock %}
