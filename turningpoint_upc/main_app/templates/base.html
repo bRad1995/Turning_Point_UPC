@@ -1,37 +1,54 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-    <link rel="'stylesheet" type="text/css" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="container">
-        <ul class="nav bg-info">
-          <li class="nav-item">
-            <a class="nav-link link-light" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="/our_story">Our Story</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="/members">Church Staff</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="/events">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link link-light" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-        {% block content %}
-        {% endblock %}
-      </div>
-    
+    <header>
+        <div class="container">
+            <ul class="nav bg-info">
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/our_story">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/members">Church Staff</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">{% block content %} {% endblock %}</main>
+    <br>
+    <br>
+    <br>
+
+    <footer class="page-footer">
+        <div class="text-center">
+            <a href="https://www.facebook.com/profile.php?id=100064405853574" class="fa fa-facebook"></a>
+            <br>
+            <br>
+            <p>All Rights Reserved, &copy; 2024 Turning Point UPC &nbsp;</p>
+        </div>
+    </footer>
 </body>
+
 </html>
