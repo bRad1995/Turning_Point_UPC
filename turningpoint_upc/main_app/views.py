@@ -22,3 +22,12 @@ class AddStaff(CreateView):
     model = StaffMember
     fields = '__all__'
     success_url = '/members/'
+
+class StaffUpdate(UpdateView):
+    model = StaffMember
+    fields = '__all__'
+    success_url = '/members/'
+
+class StaffDelete(DeleteView):
+    model = StaffMember
+    success_url = '/members/'
