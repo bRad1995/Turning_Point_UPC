@@ -13,7 +13,8 @@ def staff_index(request):
     return render(request, 'staff_members/staff_index.html', {'staffmembers': staffs})
 
 def events_index(request):
-    return render(request, 'events/events_index.html')
+    events = Event.objects.all()
+    return render(request, 'events/events_index.html', {'events': events})
 
 def contact_us(request):
     return render(request, 'contact.html')
@@ -31,3 +32,17 @@ class StaffUpdate(UpdateView):
 class StaffDelete(DeleteView):
     model = StaffMember
     success_url = '/members/'
+
+class AddEvent(CreateView):
+    model = Event
+    fields = '__all__'
+    success_url = '/events/'
+
+class EventUpdate(UpdateView):
+    model = Event
+    fields = '__all__'
+    success_url = '/events/'
+
+class EventDelete(DeleteView):
+    model = Event
+    success_url = '/events/'
