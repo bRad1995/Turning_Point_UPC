@@ -2,7 +2,11 @@
 
 <h1 class="text-center">Turning Point Church Staff</h1>
 
+{% if user.is_authenticated %}
 <a href="{% url 'add_staff' %}">Add Staff Member</a>
+{% else %}
+
+{% endif %}
 <br>
 <br>
 {% for staffmember in staffmembers %}
@@ -13,8 +17,12 @@
         <p>{{ staffmember.about }}</p>
     </div>
     <div class="card-action">
+        {% if user.is_authenticated %}
         <a href="{% url 'staff_update' staffmember.id %}">Edit</a>
         <a href="{% url 'staff_delete' staffmember.id %}">Delete</a>
+        {% else %}
+
+        {% endif %}
     </div>
 </div>
 {% endfor %}
