@@ -1,29 +1,36 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="text-center">Turning Point Church Staff</h1>
+<h1 class="staff-heading">Turning Point Staff</h1>
 
 {% if user.is_authenticated %}
-<a href="{% url 'add_staff' %}">Add Staff Member</a>
+<button type="button" class="btn btn-info"><a href="{% url 'add_staff' %}">Add Staff Member</a></button>
 {% else %}
 
 {% endif %}
 <br>
-<br>
-{% for staffmember in staffmembers %}
-<div class="card">
-    <div class="card-content">
-        <h1 class="staff-card-title text-center">{{ staffmember.name }}</h1>
-        <h4 class="text-center">{{ staffmember.role }}</h4>
-        <p>{{ staffmember.about }}</p>
-    </div>
-    <div class="card-action">
-        {% if user.is_authenticated %}
-        <a href="{% url 'staff_update' staffmember.id %}">Edit</a>
-        <a href="{% url 'staff_delete' staffmember.id %}">Delete</a>
-        {% else %}
+<div class="staff_container">
+    {% for staffmember in staffmembers %}
+    <div class="card" style="max-width: 40rem;">
+        <div class="card-image">
+            <img class="staff-image" style="max-width: 40%; max-height: 40vh; text-align: center;" src="{{ staffmember.image }}"
+                alt="{{ staffmember.name }}">
+        </div>
+        <div class="card-body d-flex flex-column align-items-center" style="text-align: center;">
+            <h1 class="staff-card-title">{{ staffmember.name }}</h1>
+            <h4 class="staff-role">{{ staffmember.role }}</h4>
+            <p class="about-staff">{{ staffmember.about }}</p>
+        </div>
+        <div class="card-action">
+            {% if user.is_authenticated %}
+            <button type="button" class="btn btn-success"><a href="{% url 'staff_update' staffmember.id %}">Edit</a></button>
+            <button type="button" class="btn btn-danger"><a href="{% url 'staff_delete' staffmember.id %}">Delete</a></button>
+            <br>
+            <br>
+            {% else %}
 
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% endblock %}

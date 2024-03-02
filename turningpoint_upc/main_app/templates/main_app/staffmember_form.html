@@ -1,6 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 
 {% if object %}
+<br>
+<br>
 <h1>
     Edit <span class="teal-text">{{object.name}}</span>
 </h1>
@@ -14,6 +16,10 @@
     <table>
         {{ form.as_table }}
     </table>
-    <input type="submit" value="Submit" class="btn" />
+    <br>
+    <button type="button" class="btn btn-success"><input type="submit" value="Submit" class="btn" /></button>
+    <button type="button" class="btn btn-secondary"><a href="{% url 'staff_index' %}">Cancel</a></button>
+    <br>
+    <br>
 </form>
 {% endblock %}

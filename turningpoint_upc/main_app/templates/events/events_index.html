@@ -1,31 +1,35 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="text-center">Church Events</h1>
+<h1 class="events-heading">Church Events</h1>
 
 {% if user.is_authenticated %}
-<a href="{% url 'add_event' %}">Add Event</a>
+<button type="button" class="btn btn-info"><a href="{% url 'add_event' %}">Add Event</a></button>
 {% else %}
 
 {% endif %}
 <br>
 <br>
-{% for event in events %}
-<div class="card">
-    <div class="card-content">
-        <h2>{{ event.name }}</h2>
-        <p>{{ event.date }}</p>
-        <p>{{ event.time }}</p>
-        <p>{{ event.location }}</p>
-        <p>{{ event.description }}</p>
-    </div>
-    <div class="card-action">
-        {% if user.is_authenticated %}
-        <a href="{% url 'event_update' event.id %}">Update</a>
-        <a href="{% url 'event_delete' event.id %}">Delete</a>
-        {% else %}
+<div class="event-container">
+    {% for event in events %}
+    <div class="card text-bg-secondary mb-3" style="max-width: 40rem;">
+        <div class="card-content">
+            <h2>{{ event.name }}</h2>
+            <p>{{ event.date }}</p>
+            <p>{{ event.time }}</p>
+            <p>{{ event.location }}</p>
+            <p>{{ event.description }}</p>
+        </div>
+        <div class="card-action">
+            {% if user.is_authenticated %}
+            <button type="button" class="btn btn-success"><a
+                    href="{% url 'event_update' event.id %}">Update</a></button>
+            <button type="button" class="btn btn-danger"><a href="{% url 'event_delete' event.id %}">Delete</a></button>
+            {% else %}
 
-        {% endif %}
-      </div>
+            {% endif %}
+        </div>
+        <br>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
 {% endblock %}

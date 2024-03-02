@@ -1,7 +1,12 @@
+body {
+    height: 100vh;
+
+}
+
 .fa {
-    padding: 15px;
-    font-size: 20px;
-    width: 40px;
+    padding: 5px;
+    font-size: 55px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
@@ -15,18 +20,125 @@
 #carouselHero .carousel-item img {
     object-fit: cover;
     object-position: center;
-    height: 50vh;
-    overflow: hidden;
-  }
+    height: 60vh;
+}
 
-.base-footer{
+.page-footer {
     text-align: center;
 }
 
-#welcome{
+#welcome {
     font-size: 20px;
 }
 
-.staff-card-title{
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    color: white !important;
+    font-family: "Lexend Zetta";
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.staff_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.event-submit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.staff-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.staff-image {
+    position: center;
+    margin-top: 5%;
+}
+
+.staff-card-title {
+    text-align: center;
+}
+
+.staff-role {
+    text-align: center;
+}
+
+.about-staff {
+    text-align: center;
+}
+
+.delete-staff-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.delete-staff-name {
     font-size: 30px;
+    color: lightslategray;
+}
+
+.contact-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.events-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.our-story-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#elder-killingsworths {
+    float: left;
+    max-width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
