@@ -11,15 +11,19 @@ Turning Point UPC is a full stack web application built with Django, Python, Boo
 Link: https://turning-point-upc-1.onrender.com/
 
 Techonologies Used:
-
-Python
-Django
-Bootstrap
-PostgreSQL
+<br>
+Python,
+Django,
+Bootstrap,
+PostgreSQL,
 Neon
-
-
+<br>
+<br>
 User Stories:
-
+<br>
 Users/Groups should be able to add, edit and delete staff members
 Users/Groups should be able to add, edit and delete church events
+
+Future Enhancements:
+<br>
+Any and all future enchancements will be requested at the discretion of the church, however, some already proposed features have included a "giving hub" where members can electronically give money to the church and a "hall of fame" page showcasing significant members from the past. 
