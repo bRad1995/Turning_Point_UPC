@@ -109,6 +109,20 @@ a:visited {
     color: lightslategray;
 }
 
+.delete-event-heading {
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.delete-event-name {
+    font-size: 30px;
+    color: lightslategray;
+}
+
 .contact-heading {
     text-align: center;
     font-family: "Lexend Zetta", sans-serif;
