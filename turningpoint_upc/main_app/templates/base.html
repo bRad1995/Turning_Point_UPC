@@ -19,7 +19,7 @@
 <body>
     <header>
         <div class="container">
-            <!-- <ul class="nav bg-info" style="font-size: 15px; font-family: Lexend Zetta; font-weight: 200;">
+            <ul class="nav bg-info" style="font-size: 15px; font-family: Lexend Zetta; font-weight: 200;">
                 <li class="nav-item">
                     <a class="nav-link link-light" href="/">Home</a>
                 </li>
@@ -44,44 +44,8 @@
                     <a class="nav-link link-light" href="{% url 'login' %}">Sign In</a>
                 </li>
                 {% endif %}
-            </ul> -->
-
-            <nav class="navbar navbar-light blue lighten-4 mb-4">
-                <button class="navbar-toggler toggler-example purple darken-3" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
-                    aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent41">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="/our_story">Our Story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="/members">Church Staff</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="/events">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="/contact">Contact Us</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="{% url 'logout' %}">Sign Out</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link link-light" href="{% url 'login' %}">Sign In</a>
-                    </li>
-                    {% endif %}
-
-                </div>
-            </nav>
-
+            </ul>
         </div>
-
     </header>
 
     <main class="container">{% block content %} {% endblock %}</main>
